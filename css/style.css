@@ -1,0 +1,372 @@
+/* CSS 초기화 */
+/* 전체 선택자 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+}
+body {
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    Roboto,
+    "Helvetica Neue",
+    "Segoe UI",
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.6;
+  /* line-height: 160%; */
+  letter-spacing: -0.02em;
+  color: #000;
+  background-color: #fff;
+}
+
+/* 그룹 선택자 */
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+img {
+  border: 0;
+  vertical-align: middle;
+}
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+/* 공통 스타일 */
+/* 클래스 선택자: "."으로 시작 */
+.wrap {
+  width: 100%;
+}
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: cadetblue; */
+}
+.inner {
+  width: 100%;
+  max-width: 928px;
+  height: 100%;
+  /* background-color: #fff; */
+}
+
+/* 헤더 영역 시작 */
+.header {
+  width: 100%;
+  height: 130px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  /* background-color: lightblue; */
+
+  /* Figma Auto layout */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .inner {
+  /* Auto layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4px 0px 8px;
+}
+
+.logo {
+  display: block;
+  width: 139px;
+  height: 24px;
+  font-size: 0;
+  /* text-indent: -999px; */
+}
+.logo img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-list {
+  /* ul.menu-list */
+  /* Auto layout */
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  /* background: #bebebe; */
+}
+.menu-list li a {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+.home {
+  display: block;
+  width: 24px;
+  height: 24px;
+  /* background-color: aqua; */
+  background-image: url("../assets/icons/main_black_ico.png");
+  /* background-repeat: repeat-y; */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  text-indent: -999px;
+  /* font-size: 0; */
+}
+
+.nav-utils {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.nav-pick {
+}
+.main-pick {
+  width: 32px;
+  height: 32px;
+}
+.main-pick img {
+  width: 100%;
+  object-fit: contain;
+}
+.main-pick-bubble {
+}
+.main-search {
+  width: 32px;
+  height: 32px;
+  /* background-image: url("../assets/icons/search_btn_bk.png"); */
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
+  /* background-size: contain; */
+  background: url("../assets/icons/search_btn_bk.png") no-repeat center;
+  background-size: contain;
+}
+
+/* 헤더 영역 끝 */
+
+/* 메인 영역 시작 */
+.main {
+  width: 100%;
+  background-color: wheat;
+}
+
+.hero {
+  width: 100%;
+  height: 658px;
+  /* background-color: violet; */
+}
+.hero .main-visual {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.hero .main-visual::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -16px;
+  display: block;
+  /* width: 100%; */
+  height: 20px;
+  /* background-color: brown; */
+  background-color: #fff;
+  z-index: 1;
+}
+.hero .main-visual::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  display: block;
+  /* width: 100%; */
+  height: 123px;
+  background: url("../assets/images/bg_wave.png") no-repeat center;
+  background-size: contain;
+  z-index: 1;
+}
+
+.hero .main-visual .main-visual-bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: url("../assets/images/slide_3.jpg") no-repeat center;
+  background-size: cover;
+  /* Figma: Effect -> Layer blur */
+  filter: blur(3px);
+}
+.hero .main-visual .main-visual-bg::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+/* 슬라이드 영역 */
+.visual-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  max-width: 1320px;
+  /* background-color: #d9d9d9; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Swiper 라이브러리로 대체 */
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 1088px;
+  /* background-color: #fff; */
+}
+.swiper-slide {
+}
+.swiper-slide a {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+.slide-image {
+  width: 100%;
+  height: 100%;
+  max-width: 528px;
+  max-height: 660px;
+}
+.slide-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.info-box {
+}
+
+.prev-btn {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.prev-btn img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+}
+
+.next-btn {
+  position: relative;
+  width: 64px;
+  height: 64px;
+}
+.next-btn img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+}
+.prev-btn .on,
+.next-btn .on {
+  opacity: 1;
+}
+.prev-btn .off,
+.next-btn .off {
+  opacity: 0.35;
+}
+
+.keywords {
+  width: 100%;
+  height: 85px;
+  background-color: yellow;
+}
+.rank {
+  width: 100%;
+  height: 384px;
+  padding-top: 65px;
+  background-color: steelblue;
+}
+.festival {
+  width: 100%;
+  height: 507px;
+  padding-top: 65px;
+  background-color: tomato;
+}
+.alio {
+  width: 100%;
+  height: 391px;
+  padding-top: 65px;
+  background-color: slategrey;
+}
+.banner {
+  width: 100%;
+  height: 229px;
+  padding-top: 65px;
+  background-color: chocolate;
+}
+.theme {
+  width: 100%;
+  height: 262px;
+  padding-top: 65px;
+  padding-bottom: 80px;
+  background-color: sandybrown;
+}
+/* 메인 영역 끝 */
+
+/* 푸터 영역 시작 */
+.footer {
+  width: 100%;
+  height: 206px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: thistle;
+}
+
+/* 푸터 영역 끝 */
+
+/* 태그(타입) 선택자 */
+/* 클래스 선택자 > 태그 선택자 */
+/* header {
+  background-color: blueviolet;
+} */
