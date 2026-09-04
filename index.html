@@ -12,8 +12,20 @@
       crossorigin
       href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
     />
+    <!-- Swiper CSS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="css/swiper.css" />
     <!-- 외부 스타일시트 연결 -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- JS -->
+    <script src="js/script.js" defer></script>
+    <script src="js/swHero.js" defer></script>
   </head>
 
   <body>
@@ -59,18 +71,42 @@
 
             <!-- 슬라이드 영역 -->
             <div class="visual-inner">
-              <!-- Swiper 라이브러리로 대체 -->
+              <!-- Swiper 라이브러리 -->
+              <div class="swiper sw-hero">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">Slide 1</div>
+                  <div class="swiper-slide">Slide 2</div>
+                  <div class="swiper-slide">Slide 3</div>
+                  <div class="swiper-slide">Slide 4</div>
+                  <div class="swiper-slide">Slide 5</div>
+                  <div class="swiper-slide">Slide 6</div>
+                  <div class="swiper-slide">Slide 7</div>
+                  <div class="swiper-slide">Slide 8</div>
+                  <div class="swiper-slide">Slide 9</div>
+                </div>
 
-              <button class="prev-btn">
+                <div class="swiper-pagination"></div>
+              </div>
+
+              <button class="hero-next-btn">
+                <img src="assets/images/next_on_btn.png" alt="다음 버튼" />
+                <img
+                  class="on"
+                  src="assets/images/btn_next_off.png"
+                  alt="다음 버튼"
+                />
+              </button>
+
+              <button class="hero-prev-btn">
                 <img src="assets/images/pre_on_btn.png" alt="이전 버튼" />
                 <img
-                  class="off"
+                  class="on"
                   src="assets/images/btn_pre_off.png"
                   alt="이전 버튼"
                 />
               </button>
 
-              <div class="swiper-container">
+              <!-- <div class="swiper-container">
                 <div class="swiper-slide">
                   <a href="#">
                     <div class="slide-image">
@@ -105,16 +141,7 @@
                     </div>
                   </a>
                 </div>
-              </div>
-
-              <button class="next-btn">
-                <img src="assets/images/next_on_btn.png" alt="다음 버튼" />
-                <img
-                  class="on"
-                  src="assets/images/btn_next_off.png"
-                  alt="다음 버튼"
-                />
-              </button>
+              </div> -->
             </div>
           </div>
         </section>

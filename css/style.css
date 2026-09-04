@@ -208,7 +208,7 @@ section {
   display: block;
   /* width: 100%; */
   height: 123px;
-  background: url("../assets/images/bg_wave.png") no-repeat center;
+  /* background: url("../assets/images/bg_wave.png") no-repeat center; */
   background-size: contain;
   z-index: 1;
 }
@@ -249,7 +249,7 @@ section {
 }
 
 /* Swiper 라이브러리로 대체 */
-.swiper-container {
+.sw-hero {
   position: relative;
   width: 100%;
   height: 100%;
@@ -358,43 +358,51 @@ section {
   background-color: #fff;
 }
 
-.prev-btn {
-  position: relative;
+.hero-prev-btn {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
   width: 64px;
   height: 64px;
+  z-index: 10;
 }
-.prev-btn img {
+.hero-prev-btn img {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 0;
+  /* opacity: 0; */
 }
 
-.next-btn {
-  position: relative;
+.hero-next-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   width: 64px;
   height: 64px;
+  z-index: 10;
 }
-.next-btn img {
+.hero-next-btn img {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  opacity: 0;
+  /* opacity: 0; */
 }
-.prev-btn .on,
-.next-btn .on {
-  opacity: 1;
+.hero-prev-btn .on,
+.hero-next-btn .on {
+  /* opacity: 1; */
 }
-.prev-btn .off,
-.next-btn .off {
+/* .hero-prev-btn .off,
+.hero-next-btn .off {
   opacity: 0.35;
-}
+} */
 
 .keywords {
   width: 100%;
